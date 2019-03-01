@@ -1,6 +1,7 @@
 FROM php:7.2.11-apache
-MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
+LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
 
+ENV PHP_VERSION 7.2.11
 COPY apache2.conf /bin/
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
@@ -127,7 +128,11 @@ COPY sshd_config /etc/ssh/
 EXPOSE 2222 8080
 
 ENV APACHE_RUN_USER www-data
-ENV PHP_VERSION 7.2.11
+
+# setup default site
+RUN mkdir -p /opt/startup
+COPY generateStartupCommand.sh /opt/startup/generateStartupCommand.sh
+RUN chmod 755 /opt/startup/generateStartupCommand.sh
 
 ENV PORT 8080
 ENV WEBSITE_ROLE_INSTANCE_ID localRoleInstance
