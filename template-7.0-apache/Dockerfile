@@ -38,7 +38,7 @@ RUN apt-get update \
     && ln -s /usr/include/x86_64-linux-gnu/gmp.h /usr/include/gmp.h \
     && rm -rf /var/lib/apt/lists/* \
     && pecl install imagick-beta \
-    && pecl install sqlsrv pdo_sqlsrv \
+    && pecl install sqlsrv-5.3.0 pdo_sqlsrv-5.3.0 \
     && echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini \
     && echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
