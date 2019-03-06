@@ -122,9 +122,10 @@ RUN { \
                 echo 'date.timezone=UTC'; \
     } > /usr/local/etc/php/conf.d/php.ini
 
-COPY sshd_config /etc/ssh/
-
+ENV PORT 8080
+ENV SSH_PORT 2222
 EXPOSE 2222 8080
+COPY sshd_config /etc/ssh/
 
 ENV APACHE_RUN_USER www-data
 
@@ -133,7 +134,6 @@ RUN mkdir -p /opt/startup
 COPY generateStartupCommand.sh /opt/startup/generateStartupCommand.sh
 RUN chmod 755 /opt/startup/generateStartupCommand.sh
 
-ENV PORT 8080
 ENV WEBSITE_ROLE_INSTANCE_ID localRoleInstance
 ENV WEBSITE_INSTANCE_ID localInstance
 ENV PATH ${PATH}:/home/site/wwwroot
