@@ -1,4 +1,4 @@
-FROM reponame/php:{PHP_VERSION}-apache_buildnumber
+FROM ${TAG}
 MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
 
 RUN yes | pecl install xdebug-beta \

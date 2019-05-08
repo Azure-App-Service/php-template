@@ -1,3 +1,5 @@
-# Enabling XDebug for PHP containers in Azure App Service
+# Azure App Service Linux PHP image templates
 
-To use the xdebug version of the PHP container in Azure App Service, set an appsetting called PHP_ZENDEXTENSIONS with the value xdebug.
+These are the templates used to the PHP images
+
+Realized Dockerfiles are at: https://github.com/azure-app-service/php

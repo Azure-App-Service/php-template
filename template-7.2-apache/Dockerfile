@@ -1,4 +1,4 @@
-FROM php:7.2.11-apache
+FROM ${TAG}
 LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.com>"
 
 ENV PHP_VERSION 7.2.11
