@@ -1,0 +1,62 @@
+[
+    {
+        "stack": "php",
+        "version": "5.6",
+        "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190518.2",
+        "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
+        "templateRepoBranchName": "master",
+        "outputImageName": "php:master-5.6",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/php-5.6.git",
+        "outputRepoBranchName": "master",
+        "webAppName": "appsvcbuild-php-5-6-master",
+        "xdebugOutputImageName": "php-xdebug:master-5.6",
+        "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-5.6.git",
+        "xdebugOutputRepoBranchName": "master",
+        "saveArtifacts": true
+    },
+    {
+        "stack": "php",
+        "version": "7.0",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190518.2",
+        "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
+        "templateRepoBranchName": "master",
+        "outputImageName": "php:master-7.0",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.0.git",
+        "outputRepoBranchName": "master",
+        "webAppName": "appsvcbuild-php-7-0-master",
+        "xdebugOutputImageName": "php-xdebug:master-7.0",
+        "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.0.git",
+        "xdebugOutputRepoBranchName": "master",
+        "saveArtifacts": true
+    },
+    {
+        "stack": "php",
+        "version": "7.2",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190518.2",
+        "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
+        "templateRepoBranchName": "master",
+        "outputImageName": "php:master-7.2",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.2.git",
+        "outputRepoBranchName": "master",
+        "webAppName": "appsvcbuild-php-7-2-master",
+        "xdebugOutputImageName": "php-xdebug:master-7.2",
+        "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.2.git",
+        "xdebugOutputRepoBranchName": "master",
+        "saveArtifacts": true
+    },
+    {
+        "stack": "php",
+        "version": "7.3",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190518.2",
+        "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
+        "templateRepoBranchName": "master",
+        "outputImageName": "php:master-7.3",
+        "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.3.git",
+        "outputRepoBranchName": "master",
+        "webAppName": "appsvcbuild-php-7-3-master",
+        "xdebugOutputImageName": "php-xdebug:master-7.3",
+        "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.3.git",
+        "xdebugOutputRepoBranchName": "master",
+        "saveArtifacts": true
+    }
+]
