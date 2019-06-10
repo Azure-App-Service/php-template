@@ -5,7 +5,8 @@
         "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -13,7 +14,8 @@
         "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -21,7 +23,8 @@
         "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -29,6 +32,7 @@
         "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
-        "saveArtifacts": false
+        "saveArtifacts": false,
+        "useCache": true
     }
 ]
