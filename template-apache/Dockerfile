@@ -3,6 +3,8 @@ LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.c
 
 ENV PHP_VERSION ${VERSION}
 
+RUN echo "abc"
+
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 
