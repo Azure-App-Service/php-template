@@ -2,7 +2,7 @@
     {
         "stack": "php",
         "version": "5.6",
-        "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190518.2",
+        "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "php:dev-5.6",
@@ -17,7 +17,7 @@
     {
         "stack": "php",
         "version": "7.0",
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190518.2",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "php:dev-7.0",
@@ -32,7 +32,7 @@
     {
         "stack": "php",
         "version": "7.2",
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190518.2",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "php:dev-7.2",
@@ -47,7 +47,7 @@
     {
         "stack": "php",
         "version": "7.3",
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190518.2",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190607.1",
         "templateRepoURL": "https://github.com/Azure-App-Service/php-template.git",
         "templateRepoBranchName": "dev",
         "outputImageName": "php:dev-7.3",
