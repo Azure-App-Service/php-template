@@ -12,7 +12,8 @@
         "xdebugOutputImageName": "php-xdebug:dev-5.6",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-5.6.git",
         "xdebugOutputRepoBranchName": "dev",
-        "saveArtifacts": true
+        "saveArtifacts": true,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -27,7 +28,8 @@
         "xdebugOutputImageName": "php-xdebug:dev-7.0",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.0.git",
         "xdebugOutputRepoBranchName": "dev",
-        "saveArtifacts": true
+        "saveArtifacts": true,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -42,7 +44,8 @@
         "xdebugOutputImageName": "php-xdebug:dev-7.2",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.2.git",
         "xdebugOutputRepoBranchName": "dev",
-        "saveArtifacts": true
+        "saveArtifacts": true,
+        "useCache": true
     },
     {
         "stack": "php",
@@ -57,6 +60,7 @@
         "xdebugOutputImageName": "php-xdebug:dev-7.3",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.3.git",
         "xdebugOutputRepoBranchName": "dev",
-        "saveArtifacts": true
+        "saveArtifacts": true,
+        "useCache": true
     }
 ]
