@@ -31,10 +31,15 @@ ENV WEBSITE_ROLE_INSTANCE_ID localRoleInstance
 ENV WEBSITE_INSTANCE_ID localInstance
 ENV PATH ${PATH}:/home/site/wwwroot
 
+RUN sed -i 's!ErrorLog ${APACHE_LOG_DIR}/error.log!ErrorLog /dev/stderr!g' /etc/apache2/apache2.conf 
+RUN sed -i 's!User ${APACHE_RUN_USER}!User www-data!g' /etc/apache2/apache2.conf 
+RUN sed -i 's!User ${APACHE_RUN_GROUP}!Group www-data!g' /etc/apache2/apache2.conf 
+
 RUN { \
-    echo 'DocumentRoot /home/site/wwwroot'; \
-    echo 'DirectoryIndex default.htm default.html index.htm index.html index.php hostingstart.html'; \
-    echo 'ServerName localhost'; \
+   echo 'DocumentRoot /home/site/wwwroot'; \
+   echo 'DirectoryIndex default.htm default.html index.htm index.html index.php hostingstart.html'; \
+   echo 'ServerName localhost'; \
+   echo 'CustomLog /dev/stdout combined'; \
 } >> /etc/apache2/apache2.conf
 
 WORKDIR /home/site/wwwroot
