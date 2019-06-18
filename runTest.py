@@ -26,7 +26,7 @@ def appendOutputRepo(buildRequest, pullRepo, pullId):
 
 
 def triggerBuild(buildRequests, code):
-    url = "https://blimp-test.azurewebsites.net/api/HttpBuildPipeline_HttpStart"
+    url = "https://blimp.azurewebsites.net/api/HttpBuildPipeline_HttpStart"
     querystring = {"code": code}
     payload = json.dumps(buildRequests)
     headers = {
