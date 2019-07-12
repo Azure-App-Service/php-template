@@ -42,6 +42,8 @@ RUN { \
    echo 'CustomLog /dev/stdout combined'; \
 } >> /etc/apache2/apache2.conf
 
+RUN rm -f /etc/apache2/conf-enabled/other-vhosts-access-log.conf
+
 WORKDIR /home/site/wwwroot
 
 ENTRYPOINT ["/bin/init_container.sh"]
