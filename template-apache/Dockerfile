@@ -3,6 +3,13 @@ LABEL maintainer="Azure App Services Container Images <appsvc-images@microsoft.c
 
 ENV PHP_VERSION ${VERSION}
 
+RUN apt-get update \
+   && apt-get install --yes --no-install-recommends \
+      curl \
+      net-tools \
+      dnsutils \
+      tcpdump
+
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 
