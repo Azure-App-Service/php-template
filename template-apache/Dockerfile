@@ -8,7 +8,8 @@ RUN apt-get update \
       curl \
       net-tools \
       dnsutils \
-      tcpdump
+      tcpdump \
+      iproute2
 
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
