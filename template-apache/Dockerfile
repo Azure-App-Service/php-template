@@ -17,7 +17,7 @@ COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 RUN chmod 755 /bin/init_container.sh \
     && mkdir -p /home/LogFiles/ \
     && echo "root:Docker!" | chpasswd \
-    && echo "cd /home/site/wwwroot" >> /etc/bash.bashrc \
+    && echo "cd /home" >> /root/.bashrc \
     && ln -s /home/site/wwwroot /var/www/html \
     && mkdir -p /opt/startup
 
