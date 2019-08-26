@@ -1,6 +1,6 @@
 [
     {
-        "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190730.1",
+        "baseImageName": "mcr.microsoft.com/oryx/php:5.6-20190826.2",
         "outputImageName": "php:dev-5.6",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/php-5.6.git",
@@ -16,7 +16,7 @@
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-5.6.git"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190730.1",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.0-20190826.2",
         "outputImageName": "php:dev-7.0",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.0.git",
@@ -32,7 +32,7 @@
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.0.git"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190730.1",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.2-20190826.2",
         "outputImageName": "php:dev-7.2",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.2.git",
@@ -48,7 +48,7 @@
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.2.git"
     },
     {
-        "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190730.1",
+        "baseImageName": "mcr.microsoft.com/oryx/php:7.3-20190826.2",
         "outputImageName": "php:dev-7.3",
         "outputRepoBranchName": "dev",
         "outputRepoURL": "https://github.com/blessedimagepipeline/php-7.3.git",
