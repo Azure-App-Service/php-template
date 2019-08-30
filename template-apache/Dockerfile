@@ -14,11 +14,7 @@ RUN apt-get update \
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 
-RUN if ["PHP_VERSION" == "5.6"] \
-      sudo apt-get update \
-      sudo apt-get install -y libmcrypt-dev \
-      sudo docker-php-ext-install mcrypt \
-   fi
+RUN if [ "$PHP_VERSION" == "5.6" ] ; then apt-get install -y libmcrypt-dev; docker-php-ext-install mcrypt; fi
 
 RUN chmod 755 /bin/init_container.sh \
     && mkdir -p /home/LogFiles/ \
@@ -51,7 +47,6 @@ RUN sed -i 's!User ${APACHE_RUN_GROUP}!Group www-data!g' /etc/apache2/apache2.co
 RUN { \
    echo 'DocumentRoot /home/site/wwwroot'; \
    echo 'DirectoryIndex default.htm default.html index.htm index.html index.php hostingstart.html'; \
-   echo 'ServerName localhost'; \
    echo 'CustomLog /dev/stderr combined'; \
 } >> /etc/apache2/apache2.conf
 
