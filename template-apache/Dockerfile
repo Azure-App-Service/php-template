@@ -47,7 +47,6 @@ RUN sed -i 's!User ${APACHE_RUN_GROUP}!Group www-data!g' /etc/apache2/apache2.co
 RUN { \
    echo 'DocumentRoot /home/site/wwwroot'; \
    echo 'DirectoryIndex default.htm default.html index.htm index.html index.php hostingstart.html'; \
-   echo 'ServerName localhost'; \
    echo 'CustomLog /dev/stderr combined'; \
 } >> /etc/apache2/apache2.conf
 RUN rm -f /usr/local/etc/php/conf.d/php.ini \
