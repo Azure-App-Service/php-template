@@ -60,9 +60,8 @@ RUN rm -f /usr/local/etc/php/conf.d/php.ini \
                 echo 'zend_extension=opcache'; \
     } > /usr/local/etc/php/conf.d/php.ini
 
-COPY .htaccess /home/site/wwwroot
-
 RUN rm -f /etc/apache2/conf-enabled/other-vhosts-access-log.conf
+RUN rm /etc/apache2/sites-enabled/000-default.conf
 
 WORKDIR /home/site/wwwroot
 
