@@ -14,9 +14,11 @@ RUN apt-get update \
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 
-RUN sudo apt-get update \
-   && sudo apt-get install -y libmcrypt-dev \
-   && sudo docker-php-ext-install mcrypt
+RUN if ["PHP_VERSION" == "5.6"] \
+      sudo apt-get update \
+      sudo apt-get install -y libmcrypt-dev \
+      sudo docker-php-ext-install mcrypt \
+   fi
 
 RUN chmod 755 /bin/init_container.sh \
     && mkdir -p /home/LogFiles/ \
@@ -52,6 +54,7 @@ RUN { \
    echo 'ServerName localhost'; \
    echo 'CustomLog /dev/stderr combined'; \
 } >> /etc/apache2/apache2.conf
+
 RUN rm -f /usr/local/etc/php/conf.d/php.ini \
    && { \
                 echo 'error_log=/dev/stderr'; \
@@ -61,6 +64,8 @@ RUN rm -f /usr/local/etc/php/conf.d/php.ini \
                 echo 'date.timezone=UTC'; \
                 echo 'zend_extension=opcache'; \
     } > /usr/local/etc/php/conf.d/php.ini
+
+COPY .htaccess /home/site/wwwroot
 
 RUN rm -f /etc/apache2/conf-enabled/other-vhosts-access-log.conf
 
