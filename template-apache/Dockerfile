@@ -14,8 +14,11 @@ RUN apt-get update \
 COPY init_container.sh /bin/
 COPY hostingstart.html /home/site/wwwroot/index.php
 
-RUN if [ "$PHP_VERSION" == "5.6" ] ; then apt-get install -y libmcrypt-dev; docker-php-ext-install mcrypt; fi
-
+RUN if [[ "$PHP_VERSION" == "5.6" || "$PHP_VERSION" == "7.0" ]] ; then \
+        apt-get install -y libmcrypt-dev \
+        && docker-php-ext-install mcrypt; \
+    fi
+    
 RUN chmod 755 /bin/init_container.sh \
     && mkdir -p /home/LogFiles/ \
     && echo "root:Docker!" | chpasswd \
