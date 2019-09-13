@@ -12,7 +12,7 @@ RUN apt-get update \
       iproute2
 
 COPY init_container.sh /bin/
-COPY hostingstart.html /home/site/wwwroot/index.php
+COPY hostingstart.html /home/site/wwwroot/hostingstart.html
 
 RUN if [[ "$PHP_VERSION" == "5.6" || "$PHP_VERSION" == "7.0" ]] ; then \
         apt-get install -y libmcrypt-dev \
