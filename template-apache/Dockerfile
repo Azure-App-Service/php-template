@@ -51,6 +51,9 @@ RUN { \
    echo 'DocumentRoot /home/site/wwwroot'; \
    echo 'DirectoryIndex default.htm default.html index.htm index.html index.php hostingstart.html'; \
    echo 'CustomLog /dev/stderr combined'; \
+   echo '<FilesMatch "\.(?i:ph([[p]?[0-9]*|tm[l]?))$">'; \
+   echo '   SetHandler application/x-httpd-php'; \
+   echo '</FilesMatch>'; \
 } >> /etc/apache2/apache2.conf
 
 RUN rm -f /usr/local/etc/php/conf.d/php.ini \
