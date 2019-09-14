@@ -35,9 +35,9 @@ for br in buildRequests:
     print("docker push appsvctest/{}:{}{}_{}".format(br["stack"], br["version"], prefix, tag))
     print("docker push appsvc/{}:{}{}_{}".format(br["stack"], br["version"], prefix, tag))
     prefix = "-apache-xdebug"
-    print("docker pull blimpacr.azurecr.io/{}".format(br["outputImageName"]))
-    print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:{}{}_{}".format(br["outputImageName"], br["stack"], br["version"], prefix, tag))
-    print("docker tag blimpacr.azurecr.io/{} appsvc/{}:{}{}_{}".format(br["outputImageName"], br["stack"], br["version"], prefix, tag))
+    print("docker pull blimpacr.azurecr.io/{}".format(br["xdebugOutputImageName"]))
+    print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:{}{}_{}".format(br["xdebugOutputImageName"], br["stack"], br["version"], prefix, tag))
+    print("docker tag blimpacr.azurecr.io/{} appsvc/{}:{}{}_{}".format(br["xdebugOutputImageName"], br["stack"], br["version"], prefix, tag))
     print("docker push appsvctest/{}:{}{}_{}".format(br["stack"], br["version"], prefix, tag))
     print("docker push appsvc/{}:{}{}_{}".format(br["stack"], br["version"], prefix, tag))
 
@@ -54,10 +54,10 @@ for br in buildRequests:
         print("docker push appsvc/{}:latest".format(br["stack"]))
 
         print("docker pull blimpacr.azurecr.io/{}".format(br["outputImageName"]))
-        print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:latest-xdebug_{}".format(br["outputImageName"], br["stack"], tag))
-        print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:latest-xdebug".format(br["outputImageName"], br["stack"]))
-        print("docker tag blimpacr.azurecr.io/{} appsvc/{}:latest-xdebug_{}".format(br["outputImageName"], br["stack"], tag))
-        print("docker tag blimpacr.azurecr.io/{} appsvc/{}:latest-xdebug".format(br["outputImageName"], br["stack"]))
+        print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:latest-xdebug_{}".format(br["xdebugOutputImageName"], br["stack"], tag))
+        print("docker tag blimpacr.azurecr.io/{} appsvctest/{}:latest-xdebug".format(br["xdebugOutputImageName"], br["stack"]))
+        print("docker tag blimpacr.azurecr.io/{} appsvc/{}:latest-xdebug_{}".format(br["xdebugOutputImageName"], br["stack"], tag))
+        print("docker tag blimpacr.azurecr.io/{} appsvc/{}:latest-xdebug".format(br["xdebugOutputImageName"], br["stack"]))
         print("docker push appsvctest/{}:latest-xdebug_{}".format(br["stack"], tag))
         print("docker push appsvctest/{}:latest-xdebug".format(br["stack"]))
         print("docker push appsvc/{}:latest-xdebug_{}".format(br["stack"], tag))
