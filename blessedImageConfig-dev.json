@@ -30,7 +30,7 @@
         "webAppName": "blimp-php-7-0-dev",
         "xdebugOutputImageName": "php-xdebug:dev-7.0",
         "xdebugOutputRepoBranchName": "dev",
-        "xdebugTemplateName": "template-php7-apache-xdebug",
+        "xdebugTemplateName": "template-php7.0-apache-xdebug",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.0.git"
     },
     {
