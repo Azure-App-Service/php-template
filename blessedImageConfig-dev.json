@@ -13,6 +13,7 @@
         "webAppName": "blimp-php-5-6-dev",
         "xdebugOutputImageName": "php-xdebug:dev-5.6",
         "xdebugOutputRepoBranchName": "dev",
+        "xdebugTemplateName": "template-php5-apache-xdebug",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-5.6.git"
     },
     {
@@ -29,6 +30,7 @@
         "webAppName": "blimp-php-7-0-dev",
         "xdebugOutputImageName": "php-xdebug:dev-7.0",
         "xdebugOutputRepoBranchName": "dev",
+        "xdebugTemplateName": "template-php7-apache-xdebug",
         "xdebugOutputRepoURL": "https://github.com/blessedimagepipeline/php-xdebug-7.0.git"
     },
     {
